@@ -1,0 +1,9 @@
+version: "2"
+services:
+  hugocker:
+    image: andru255/hugocker
+    ports:
+      - "1313:1313"
+    working_dir: "/usr/local/share/src"
+    volumes:
+      - $PWD:/usr/local/share/src
