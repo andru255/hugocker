@@ -1,7 +1,7 @@
 version: "2"
 services:
   hugocker:
-    image: andru255/hugocker
+    image: hugocker0.53
     ports:
       - "1313:1313"
     working_dir: "/usr/local/share/src"

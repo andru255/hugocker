@@ -53,7 +53,7 @@ We have what it takes to have a visible blog (structure, a post, a theme), and w
 
 ```
 ~ cd my-site-test
-docker run --publish 1313:1313 --rm --user $(id -u):$(id -g) -v $(pwd)/:/usr/local/share/src -w /usr/local/share/src andru255/hugocker hugo server -D -t hyde --bind=0.0.0.0
+~ docker run --publish 1313:1313 --rm --user $(id -u):$(id -g) -v $(pwd)/:/usr/local/share/src -w /usr/local/share/src andru255/hugocker hugo server -D -t hyde --bind=0.0.0.0
 ```
 
 ### Build my static blog
@@ -62,7 +62,7 @@ That command creates a folder with name **public** which contains the static fil
 
 ```
 ~ cd my-site-test
-docker run --publish 1313:1313 --rm --user $(id -u):$(id -g) -v $(pwd)/:/usr/local/share/src -w /usr/local/share/src andru255/hugocker hugo -D -v -t hyde
+~ docker run --publish 1313:1313 --rm --user $(id -u):$(id -g) -v $(pwd)/:/usr/local/share/src -w /usr/local/share/src andru255/hugocker hugo -D -v -t hyde
 ```
 
 ## With docker-compose
@@ -78,8 +78,9 @@ services:
     image: andru255/hugocker
     ports:
       - "1313:1313"
+    working_dir: "/usr/local/share/src"
     volumes:
-      - "./:/usr/local/share/src"
+      - $PWD:/usr/local/share/src
 ```
 
 ### Creating a new hugo structure
