@@ -1,7 +1,7 @@
 FROM alpine:3.6
 MAINTAINER Andrés Muñoz <andru255@gmail.com>
 
-ENV HUGO_VERSION=0.53
+ENV HUGO_VERSION=0.55.6
 ENV HUGO_FILE_TAR=hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 ENV SHARED_FOLDER=/usr/local/share
 ENV SRC_FOLDER=$SHARED_FOLDER/src

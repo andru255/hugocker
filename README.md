@@ -20,7 +20,7 @@ Docker image with hugo inside
 
 - [Alpine image](https://hub.docker.com/_/alpine/) v.3.6
 
-- [hugo](http://gohugo.io/) 0.53
+- [hugo](http://gohugo.io/) 0.55.6
 
 ## How to use
 
